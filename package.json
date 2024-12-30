@@ -8,9 +8,10 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
+    
     "dev": "turbo dev",
     "build": "turbo build",
-    "build:npm": "turbo build:npm",
+    "start:dev": "turbo start:dev",
     "start": "turbo start",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
