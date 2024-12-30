@@ -5,7 +5,7 @@ export default defaultConfig({}).deepMerge({
     description: false,
     scopes: {
       workspaces: true,
-      // options: [],
+      options: [],
     },
   },
 });
