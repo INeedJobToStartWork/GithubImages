@@ -22,7 +22,7 @@ export default defineConfig([
 		treeshake: true,
 
 		outDir: "dist",
-		
-		esbuildPlugins:[...config.esbuildPlugins,noInternalExportsPlugin]
+
+		esbuildPlugins: [...config.esbuildPlugins, noInternalExportsPlugin]
 	}
 ]);

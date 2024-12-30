@@ -9,7 +9,15 @@ export default defineConfig({
 	format: ["esm"],
 	noExternal: ["typia"],
 
-	esbuildPlugins: [
-		typiaPlug({ tsconfig: "./tsconfig.json", cache: true }),
-	],
-	});
+	esbuildPlugins: [typiaPlug({ tsconfig: "./tsconfig.json", cache: true })],
+	banner: ({ format }) => {
+		if (format === "esm") {
+			const banner = `
+import { createRequire } from "node:module";
+const require = createRequire(import.meta.url);
+      `;
+
+			return { js: banner };
+		}
+	}
+});
