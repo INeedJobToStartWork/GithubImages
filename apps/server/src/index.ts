@@ -1,9 +1,7 @@
-import app from "@/app";
+import app from "@app";
 import "@/api/routes/";
 
-const PORT = process.env.PORT || 3000;
-const HOST = process.env.HOST || "localhost";
-
+import { PORT, HOST } from "@/utils";
 
 console.time("⚡ Server startup");
 app.listen(PORT, () => {

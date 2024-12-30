@@ -6,7 +6,9 @@
 		"outDir": "./dist",
 		"baseUrl": "src",
 		"paths": {
-			"@/*": ["*", "*/index.ts", "*.ts"]
+			"@/*": ["*", "*/index.ts", "*.ts"],
+			"@env": ["utils/envVariables.ts"],
+			"@app": ["app.ts"],
 		},
 		"stripInternal": true,
 		"plugins": [
