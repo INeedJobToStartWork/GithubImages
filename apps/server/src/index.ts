@@ -1,7 +1,7 @@
 import app from "@app";
-import "@/api/routes/";
+import "@/api/v1/routes";
 
-import { PORT, HOST } from "@/utils";
+import { PORT, HOST } from "@env";
 
 console.time("⚡ Server startup");
 app.listen(PORT, () => {
