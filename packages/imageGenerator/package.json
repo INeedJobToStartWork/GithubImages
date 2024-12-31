@@ -1,0 +1,48 @@
+{
+	"name": "@packages/imageGenerator",
+	"version": "0.0.0",
+	"private": true,
+	"license": "MIT",
+	"type": "module",
+	"main": "lib/index.js",
+	"scripts": {
+		"build": "pnpm tsup --config ./config/tsuprc/tsup.prod.ts",
+		"dev": "pnpm tsup --config ./config/tsuprc/tsup.dev.ts",
+		"format": "pnpm prettier . --write && pnpm prettier . --check",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"pre": "git add . && npx lint-staged",
+		"prepare": "ts-patch install && typia patch",
+		"start:build": "node ./dist/index.js",
+		"start:dev": "node ./lib/index.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"lint-staged": {
+		"*": [
+			"git add .",
+			"pnpm format",
+			"pnpm lint:fix",
+			"pnpm build"
+		]
+	},
+	"dependencies": {
+		"oh-my-error": "^2.0.1",
+		"typia": "6.12.2"
+	},
+	"devDependencies": {
+		"@esplugins/no-internal-exports": "^1.0.0",
+		"@ineedj/eslintrc": "^1.2.3",
+		"@ineedj/prettierrc": "^2.0.0",
+		"@ineedj/tsconfig": "^1.0.0",
+		"@ryoppippi/unplugin-typia": "1.0.7",
+		"@types/node": "^22.10.2",
+		"esbuild": "^0.24.0",
+		"esbuild-plugin-copy": "^2.1.1",
+		"eslint": "^8.57.1",
+		"lint-staged": "^15.2.11",
+		"prettier": "^3.4.2",
+		"ts-patch": "^3.3.0",
+		"tsup": "^8.3.5",
+		"typescript": "^5.6.3"
+	}
+}

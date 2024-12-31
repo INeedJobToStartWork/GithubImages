@@ -100,6 +100,58 @@ importers:
         specifier: ^5.6.3
         version: 5.7.2
 
+  packages/imageGenerator:
+    dependencies:
+      oh-my-error:
+        specifier: ^2.0.1
+        version: 2.0.1
+      typia:
+        specifier: 6.12.2
+        version: 6.12.2(@samchon/openapi@1.2.4)(typescript@5.7.2)
+    devDependencies:
+      '@esplugins/no-internal-exports':
+        specifier: ^1.0.0
+        version: 1.0.0
+      '@ineedj/eslintrc':
+        specifier: ^1.2.3
+        version: 1.2.3(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.7.2))(tailwindcss@3.4.17)(typescript@5.7.2)
+      '@ineedj/prettierrc':
+        specifier: ^2.0.0
+        version: 2.0.0(prettier-plugin-packagejson@2.5.6(prettier@3.4.2))(prettier@3.4.2)
+      '@ineedj/tsconfig':
+        specifier: ^1.0.0
+        version: 1.0.0
+      '@ryoppippi/unplugin-typia':
+        specifier: 1.0.7
+        version: 1.0.7(@samchon/openapi@1.2.4)(@types/node@22.10.2)(rollup@4.29.1)
+      '@types/node':
+        specifier: ^22.10.2
+        version: 22.10.2
+      esbuild:
+        specifier: ^0.24.0
+        version: 0.24.2
+      esbuild-plugin-copy:
+        specifier: ^2.1.1
+        version: 2.1.1(esbuild@0.24.2)
+      eslint:
+        specifier: ^8.57.1
+        version: 8.57.1
+      lint-staged:
+        specifier: ^15.2.11
+        version: 15.3.0
+      prettier:
+        specifier: ^3.4.2
+        version: 3.4.2
+      ts-patch:
+        specifier: ^3.3.0
+        version: 3.3.0
+      tsup:
+        specifier: ^8.3.5
+        version: 8.3.5(jiti@1.21.7)(postcss@8.4.49)(typescript@5.7.2)(yaml@2.6.1)
+      typescript:
+        specifier: ^5.6.3
+        version: 5.7.2
+
 packages:
 
   '@alloc/quick-lru@5.2.0':
