@@ -26,9 +26,9 @@
 		]
 	},
 	"dependencies": {
+		"@packages/imageGenerator": "workspace:*",
 		"express": "^4.21.2",
 		"express-rate-limit": "^7.5.0",
-		"glob": "^11.0.0",
 		"oh-my-error": "^2.0.1",
 		"typia": "6.12.2"
 	},

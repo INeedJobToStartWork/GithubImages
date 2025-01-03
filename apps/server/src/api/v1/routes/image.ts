@@ -1,5 +1,5 @@
 import app from "@/app";
 
-app.get("/image", (req, res) => {
+app.get("/v1/image", (req, res) => {
 	res.send("Hello World");
 });

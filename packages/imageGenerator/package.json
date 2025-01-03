@@ -27,6 +27,7 @@
 	},
 	"dependencies": {
 		"oh-my-error": "^2.0.1",
+		"puppeteer": "^23.11.1",
 		"typia": "6.12.2"
 	},
 	"devDependencies": {
