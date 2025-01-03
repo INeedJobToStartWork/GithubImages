@@ -16,7 +16,7 @@ type Tparams = {
 		height: tags.Maximum<2560> & tags.Minimum<0> & number;
 		width: tags.Maximum<2560> & tags.Minimum<0> & number;
 	};
-	type: "gif" | "png" | "svg" | "webp";
+	type: "fakeSVG" | "gif" | "png" | "svg" | "webp";
 };
 
 //----------------------
