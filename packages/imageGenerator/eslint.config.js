@@ -33,5 +33,6 @@ export default ineedj({
 	"@EslintNode/no-process-env",
 	"@EslintNode/no-process-exit",
 	"@EslintUnicorn/no-process-exit",
-	"@EslintImports/no-unassigned-import"
+	"@EslintImports/no-unassigned-import",
+	"@typescript-eslint/no-unsafe-call" // Express types are ...
 );

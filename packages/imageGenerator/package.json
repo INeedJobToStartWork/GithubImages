@@ -5,6 +5,7 @@
 	"license": "MIT",
 	"type": "module",
 	"main": "lib/index.js",
+	"types": "lib/index.d.ts",
 	"scripts": {
 		"build": "pnpm tsup --config ./config/tsuprc/tsup.prod.ts",
 		"dev": "pnpm tsup --config ./config/tsuprc/tsup.dev.ts",

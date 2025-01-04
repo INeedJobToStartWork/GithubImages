@@ -1,8 +1,10 @@
+import type { Application } from "express";
 import express from "express";
 import { rateLimit } from "express-rate-limit";
 
-export const app = express();
+export const app: Application = express();
 
+app.use(express.json());
 app.use(
 	rateLimit({
 		windowMs: 2 * 60 * 1000, // 2 minutes
