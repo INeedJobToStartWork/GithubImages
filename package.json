@@ -6,9 +6,7 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "type": "module",
   "scripts": {
-    
     "dev": "turbo dev",
     "build": "turbo build",
     "start:dev": "turbo start:dev",

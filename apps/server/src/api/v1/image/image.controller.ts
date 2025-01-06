@@ -1,13 +1,13 @@
-import { TypedRoute } from '@nestia/core';
-import { Controller, Get, Version } from '@nestjs/common';
-import { ImageService } from './image.service';
+import { Controller, Get } from "@nestjs/common";
+import { ImageService } from "./image.service";
+import { TypedRoute } from "@nestia/core";
 
-@Controller({ version: '1' })
+@Controller({ version: "1" })
 export class ImageController {
-  constructor(private readonly imageService: ImageService) {}
+	constructor(private readonly imageService: ImageService) {}
 
-  @Get('/image')
-  getImage() {
-    return this.imageService.getImage();
-  }
+	@TypedRoute.Get("/image")
+	getImage() {
+		return this.imageService.getImage();
+	}
 }

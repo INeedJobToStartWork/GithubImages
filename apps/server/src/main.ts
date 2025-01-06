@@ -1,12 +1,20 @@
-import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
-import { VersioningType } from '@nestjs/common';
+import { NestFactory } from "@nestjs/core";
+import { AppModule } from "./app.module";
+import type { INestApplication } from "@nestjs/common";
+import { VersioningType  } from "@nestjs/common";
+
+import { NestiaSwaggerComposer } from "@nestia/sdk";
+import { SwaggerModule } from "@nestjs/swagger";
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+	const app: INestApplication = await NestFactory.create(AppModule);
 
-  app.enableVersioning({ type: VersioningType.URI });
+	app.enableVersioning({ type: VersioningType.URI });
 
-  await app.listen(process.env.PORT ?? 3000);
+	const document = await NestiaSwaggerComposer.document(app, {});
+	SwaggerModule.setup("api", app, document as any);
+	await app.listen(4000);
+
+	// await app.listen(process.env.PORT ?? 3000);
 }
-bootstrap();
+bootstrap().catch(console.error);
