@@ -26,4 +26,4 @@ const envVariables = process.env;
 if (!is<NodeJS.ProcessEnv>(envVariables)) throw new Error("Invalid env variables");
 
 export default envVariables;
-export const {PORT,HOST,TZ,...restEnv} = envVariables;
+export const { PORT, HOST, TZ, ...restEnv } = envVariables;
