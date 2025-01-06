@@ -7,7 +7,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @TypedRoute.Get('/hello')
-  getHello(@TypedBody() text: Parameters<typeof this.appService.getHello>[0]) {
+  getHello(@TypedBody() text?: Parameters<typeof this.appService.getHello>[0]) {
     return this.appService.getHello(text);
   }
 }
