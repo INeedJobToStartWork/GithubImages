@@ -11,6 +11,7 @@ import { WinstonConfig } from "@/../config/winstonLogger";
 async function bootstrap() {
 	const app: INestApplication = await NestFactory.create(AppModule, {
 		logger: WinstonModule.createLogger({ instance: WinstonConfig })
+		
 	});
 
 	app.enableVersioning({ type: VersioningType.URI });
