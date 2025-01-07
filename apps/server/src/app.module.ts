@@ -4,13 +4,17 @@ import { ImageModule } from "./api/v1/image/image.module";
 import { APP_FILTER } from "@nestjs/core";
 import { ErrorHandlerFilter } from "./middlewares";
 
+//----------------------
+// Modules
+//----------------------
+
 @Module({
 	imports: [ImageModule],
 	providers: [
-    {
-      provide: APP_FILTER,
-      useClass: ErrorHandlerFilter,
-    },
-  ],
+		{
+			provide: APP_FILTER,
+			useClass: ErrorHandlerFilter
+		}
+	]
 })
 export class AppModule {}

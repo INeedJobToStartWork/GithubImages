@@ -8,10 +8,13 @@ import { PORT, HOST } from "@/utils";
 import { WinstonModule } from "nest-winston";
 import { WinstonConfig } from "@/../config/winstonLogger";
 
+//----------------------
+// Functions
+//----------------------
+
 async function bootstrap() {
 	const app: INestApplication = await NestFactory.create(AppModule, {
 		logger: WinstonModule.createLogger({ instance: WinstonConfig })
-		
 	});
 
 	app.enableVersioning({ type: VersioningType.URI });

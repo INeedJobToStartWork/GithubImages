@@ -18,10 +18,6 @@ declare global {
 // Functions
 //----------------------
 
-//----------------------
-// Functions
-//----------------------
-
 const envVariables = process.env;
 if (!is<NodeJS.ProcessEnv>(envVariables)) throw new Error("Invalid env variables");
 

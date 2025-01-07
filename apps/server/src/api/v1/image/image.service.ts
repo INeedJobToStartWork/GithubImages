@@ -1,5 +1,8 @@
 import { Injectable } from "@nestjs/common";
-import { IMyErrorAPI, myError } from "oh-my-error";
+
+//----------------------
+// Services
+//----------------------
 
 @Injectable()
 export class ImageService {
