@@ -1,6 +1,6 @@
 import { Controller } from "@nestjs/common";
 import { ImageService } from "./image.service";
-import { TypedRoute } from "@nestia/core";
+import { TypedBody, TypedRoute } from "@nestia/core";
 
 //----------------------
 // Router & Controller
@@ -11,7 +11,10 @@ export class ImageController {
 	constructor(private readonly imageService: ImageService) {}
 
 	@TypedRoute.Get("/image")
-	getImage() {
+	getImage(@TypedBody() props: Parameters<typeof this.imageService.getImage>) {
 		return this.imageService.getImage();
 	}
 }
+
+
+
