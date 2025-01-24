@@ -1,6 +1,7 @@
-import { Injectable } from "@nestjs/common";
-import { IMyErrorAPI, IMyErrorValidation, myError, StatusCode, TMyErrorList } from "oh-my-error";
-import { generateImg } from "@packages/imageGenerator"
+import { Header, Injectable } from "@nestjs/common";
+import { generator } from "@packages/imageGenerator";
+// import { IMyErrorAPI, IMyErrorValidation, myError, StatusCode, TMyErrorList } from "oh-my-error";
+// import { generateImg } from "@packages/imageGenerator"
 
 //----------------------
 // MyError
@@ -17,22 +18,20 @@ import { generateImg } from "@packages/imageGenerator"
 //----------------------
 
 /** @internal @dontexport */
-// type TParams = Parameters<typeof generateImg>[0] & {
-// 	cache?: boolean;
-// };
-
+type TParams = Parameters<typeof generator>[0] & {
+	cache?: boolean;
+};
 
 //----------------------
 // Services (API)
-//----------------------
+//----------------------s
 
 @Injectable()
 export class ImageService {
-	getImage() {
-		// throw myError(MyErrorList.MISSING_PROPERTIES)
-		const result = generateImg({})
-		return "Image";
+	getImage(input: TParams) {
+		const result = generator(input);
+		console.log("AHA");
+
+		return result;
 	}
 }
-
-

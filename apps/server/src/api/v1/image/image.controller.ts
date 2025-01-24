@@ -1,6 +1,7 @@
-import { Controller } from "@nestjs/common";
+import { Controller, Post, Res } from "@nestjs/common";
 import { ImageService } from "./image.service";
-import { TypedBody, TypedRoute } from "@nestia/core";
+import { TypedBody } from "@nestia/core";
+import { Response } from "express";
 
 //----------------------
 // Router & Controller
@@ -10,11 +11,10 @@ import { TypedBody, TypedRoute } from "@nestia/core";
 export class ImageController {
 	constructor(private readonly imageService: ImageService) {}
 
-	@TypedRoute.Get("/image")
-	getImage(@TypedBody() props: Parameters<typeof this.imageService.getImage>) {
-		return this.imageService.getImage();
+	@Post("/image")
+	async getImage(@TypedBody() input: Parameters<typeof this.imageService.getImage>[0], @Res() res: Response) {
+		const screenshotBuffer = await this.imageService.getImage(input);
+		console.log("screenshotBuffer", screenshotBuffer);
+		return res.end(screenshotBuffer);
 	}
 }
-
-
-

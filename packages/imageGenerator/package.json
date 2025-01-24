@@ -2,6 +2,7 @@
 	"name": "@packages/imageGenerator",
 	"version": "0.0.0",
 	"private": true,
+	"description": "Image/GIF/Video Generator from HTML,CSS,JS code",
 	"license": "MIT",
 	"type": "module",
 	"main": "lib/index.js",
@@ -27,8 +28,13 @@
 		]
 	},
 	"dependencies": {
+		"get-pixels": "^3.3.3",
+		"gif-encoder": "^0.7.2",
+		"html2svg": "^1.0.1",
 		"oh-my-error": "^2.0.1",
+		"png-js": "^1.0.0",
 		"puppeteer": "^23.11.1",
+		"puppeteer-screen-recorder": "^3.0.6",
 		"typia": "7.5.1"
 	},
 	"devDependencies": {
@@ -37,6 +43,8 @@
 		"@ineedj/prettierrc": "^2.0.0",
 		"@ineedj/tsconfig": "^1.0.0",
 		"@ryoppippi/unplugin-typia": "^1.1.0",
+		"@types/get-pixels": "^3.3.4",
+		"@types/gif-encoder": "^0.7.4",
 		"@types/node": "^22.10.5",
 		"esbuild": "^0.24.2",
 		"esbuild-plugin-copy": "^2.1.1",

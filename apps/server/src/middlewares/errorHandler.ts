@@ -13,6 +13,6 @@ export class ErrorHandlerFilter implements ExceptionFilter {
 
 		Logger.error(exception, exception);
 
-		response.status(exception?.status || 500).json(exception);
+		response.status(exception?.status || 500).json(exception.response);
 	}
 }

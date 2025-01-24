@@ -1,1 +1,1 @@
-export * from "./generateImg";
+export * from "./generatorImage";
