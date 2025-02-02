@@ -1,4 +1,4 @@
-import { Header, Injectable } from "@nestjs/common";
+import { Injectable } from "@nestjs/common";
 import { generator } from "@packages/imageGenerator";
 // import { IMyErrorAPI, IMyErrorValidation, myError, StatusCode, TMyErrorList } from "oh-my-error";
 // import { generateImg } from "@packages/imageGenerator"

@@ -6,7 +6,6 @@ import type { ScreenshotOptions } from "puppeteer";
 import generateFakeSvg from "./generateFakeSvg";
 import generateScreenshot from "./generateScreenshot";
 import { generateGif } from "./generateGif";
-import generateVideo from "./generateVideo";
 
 //----------------------
 // MyError
@@ -28,7 +27,7 @@ const MyErrorList = {
 
 // TODO: svg option
 /** @dontexport */
-export type TTypes = Exclude<ScreenshotOptions["type"], undefined> | "fakeSVG" | "gif" | "video" /** | "svg" */;
+export type TTypes = Exclude<ScreenshotOptions["type"], undefined> | "fakeSVG" | "gif" /** | "video" */ /** | "svg" */;
 
 /** @dontexport */
 export type TProps = { type: TTypes };
@@ -40,7 +39,7 @@ const OPTIONS_GENERATOR = {
 	fakeSVG: generateFakeSvg,
 	gif: generateGif,
 	png: generateScreenshot,
-	video: generateVideo,
+	// video: generateVideo,
 	// svg: generateGif,
 	webp: generateScreenshot,
 	jpeg: generateScreenshot
