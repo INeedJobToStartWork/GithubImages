@@ -4,6 +4,8 @@
     "pre": {},
     "start": {},
     "build": {},
+    "build:dev": {},
+    "build:prod": {},
     "dts": {},
     "lint:next": {},
     "lint:test": {},
